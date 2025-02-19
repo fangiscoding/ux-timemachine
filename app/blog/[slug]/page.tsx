@@ -31,7 +31,7 @@ export default async function BlogArticle({ params }: { params: { slug: string }
             <Image className="mt-8 rounded-lg border" src={urlFor(data.featuredImage).url()} width={800} height={800} alt="Featured Image" />
 
             <div className="mt-16 prose prose-blue prose-lg dark:prose-invert">
-                <PortableText value={data.content} />
+                <PortableText value={JSON.parse(data.content)} />
             </div>
         </div>
     )
